@@ -13,6 +13,7 @@
 		E80010F92D00CF1200060A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80010F72D00CF1200060A93 /* Main.storyboard */; };
 		E80010FB2D00CF1400060A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80010FA2D00CF1400060A93 /* Assets.xcassets */; };
 		E80010FE2D00CF1400060A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80010FC2D00CF1400060A93 /* LaunchScreen.storyboard */; };
+		E80011072D00CF4600060A93 /* SuperHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80011062D00CF4600060A93 /* SuperHero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E80010FA2D00CF1400060A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80010FD2D00CF1400060A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E80010FF2D00CF1400060A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E80011062D00CF4600060A93 /* SuperHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		E80010F02D00CF1200060A93 /* SuperHero10 */ = {
 			isa = PBXGroup;
 			children = (
+				E80011082D00CF6D00060A93 /* ViewController */,
+				E80011052D00CF2E00060A93 /* Model */,
 				E80010F12D00CF1200060A93 /* AppDelegate.swift */,
 				E80010F32D00CF1200060A93 /* SceneDelegate.swift */,
-				E80010F52D00CF1200060A93 /* ViewController.swift */,
 				E80010F72D00CF1200060A93 /* Main.storyboard */,
 				E80010FA2D00CF1400060A93 /* Assets.xcassets */,
 				E80010FC2D00CF1400060A93 /* LaunchScreen.storyboard */,
 				E80010FF2D00CF1400060A93 /* Info.plist */,
 			);
 			path = SuperHero10;
+			sourceTree = "<group>";
+		};
+		E80011052D00CF2E00060A93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E80011062D00CF4600060A93 /* SuperHero.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E80011082D00CF6D00060A93 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E80010F52D00CF1200060A93 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +160,7 @@
 				E80010F62D00CF1200060A93 /* ViewController.swift in Sources */,
 				E80010F22D00CF1200060A93 /* AppDelegate.swift in Sources */,
 				E80010F42D00CF1200060A93 /* SceneDelegate.swift in Sources */,
+				E80011072D00CF4600060A93 /* SuperHero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

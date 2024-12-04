@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperHero10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sc1-VIEW">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="750"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="heroImageView">
+                                                <rect key="frame" x="121.66666666666669" y="50" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="img-h"/>
+                                                    <constraint firstAttribute="width" constant="150" id="img-w"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nameLabel">
+                                                <rect key="frame" x="16" y="216" width="361" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="statsView">
+                                                <rect key="frame" x="16" y="256" width="361" height="159.66666666666663"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="statsStack">
+                                                        <rect key="frame" x="8" y="8" width="345" height="143.66666666666666"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWERSTATS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="statsTitle">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="15.666666666666666"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="statsContent">
+                                                                <rect key="frame" x="0.0" y="23.666666666666686" width="345" height="120"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="120" id="stats-h"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="statsStack" firstAttribute="leading" secondItem="statsView" secondAttribute="leading" constant="8" id="ss1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="statsStack" secondAttribute="trailing" constant="8" id="ss2"/>
+                                                    <constraint firstItem="statsStack" firstAttribute="top" secondItem="statsView" secondAttribute="top" constant="8" id="ss3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="statsStack" secondAttribute="bottom" constant="8" id="ss4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bioView">
+                                                <rect key="frame" x="16" y="431.66666666666669" width="361" height="159.66666666666669"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bioStack">
+                                                        <rect key="frame" x="8" y="8" width="345" height="143.66666666666666"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIOGRAPHY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bioTitle">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="15.666666666666666"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bioContent">
+                                                                <rect key="frame" x="0.0" y="23.666666666666629" width="345" height="120"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="120" id="bio-h"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="bioStack" firstAttribute="leading" secondItem="bioView" secondAttribute="leading" constant="8" id="bs1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bioStack" secondAttribute="trailing" constant="8" id="bs2"/>
+                                                    <constraint firstItem="bioStack" firstAttribute="top" secondItem="bioView" secondAttribute="top" constant="8" id="bs3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bioStack" secondAttribute="bottom" constant="8" id="bs4"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="nameLabel" firstAttribute="top" secondItem="heroImageView" secondAttribute="bottom" constant="30" id="BdP-s3-RBH"/>
+                                            <constraint firstItem="bioView" firstAttribute="top" secondItem="statsView" secondAttribute="bottom" constant="16" id="bc1"/>
+                                            <constraint firstAttribute="trailing" secondItem="bioView" secondAttribute="trailing" constant="16" id="bc2"/>
+                                            <constraint firstItem="bioView" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="16" id="bc3"/>
+                                            <constraint firstAttribute="height" constant="600" id="content-h"/>
+                                            <constraint firstItem="heroImageView" firstAttribute="top" secondItem="contentView" secondAttribute="top" constant="50" id="gp7-yw-SAM"/>
+                                            <constraint firstItem="heroImageView" firstAttribute="centerX" secondItem="contentView" secondAttribute="centerX" id="ic1"/>
+                                            <constraint firstItem="nameLabel" firstAttribute="top" secondItem="heroImageView" secondAttribute="bottom" constant="16" id="nc1"/>
+                                            <constraint firstAttribute="trailing" secondItem="nameLabel" secondAttribute="trailing" constant="16" id="nc2"/>
+                                            <constraint firstItem="nameLabel" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="16" id="nc3"/>
+                                            <constraint firstItem="statsView" firstAttribute="top" secondItem="nameLabel" secondAttribute="bottom" constant="16" id="sc1"/>
+                                            <constraint firstAttribute="trailing" secondItem="statsView" secondAttribute="trailing" constant="16" id="sc2"/>
+                                            <constraint firstItem="statsView" firstAttribute="leading" secondItem="contentView" secondAttribute="leading" constant="16" id="sc3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="contentView" firstAttribute="leading" secondItem="sc1-VIEW" secondAttribute="leading" id="sv1"/>
+                                    <constraint firstAttribute="trailing" secondItem="contentView" secondAttribute="trailing" id="sv2"/>
+                                    <constraint firstItem="contentView" firstAttribute="top" secondItem="sc1-VIEW" secondAttribute="top" id="sv3"/>
+                                    <constraint firstAttribute="bottom" secondItem="contentView" secondAttribute="bottom" id="sv4"/>
+                                    <constraint firstItem="contentView" firstAttribute="width" secondItem="sc1-VIEW" secondAttribute="width" id="sv5"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rollButton">
+                                <rect key="frame" x="16" y="766" width="361" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="btn-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Roll New Hero"/>
+                                <connections>
+                                    <action selector="heroRollDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="roll-action"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sc1-VIEW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mc1"/>
+                            <constraint firstAttribute="trailing" secondItem="sc1-VIEW" secondAttribute="trailing" id="mc2"/>
+                            <constraint firstItem="sc1-VIEW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mc3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rollButton" secondAttribute="bottom" id="mc4"/>
+                            <constraint firstItem="rollButton" firstAttribute="top" secondItem="sc1-VIEW" secondAttribute="bottom" constant="16" id="mc5"/>
+                            <constraint firstItem="rollButton" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mc6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rollButton" secondAttribute="trailing" constant="16" id="mc7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bioContentView" destination="bioContent" id="bio-outlet"/>
+                        <outlet property="heroImageView" destination="heroImageView" id="img-outlet"/>
+                        <outlet property="nameLabel" destination="nameLabel" id="name-outlet"/>
+                        <outlet property="statsContentView" destination="statsContent" id="stats-outlet"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
